@@ -7,6 +7,7 @@ module.exports = {
     popup: './src/popup.js',
     background: './src/background.js',
     content: './src/content.js',
+    'edit-mode': './src/edit-mode/index.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),

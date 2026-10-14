@@ -78,6 +78,17 @@ Safari requires additional steps:
 **Keyboard Shortcut**:
 - Select text and press `Cmd+Shift+S` (Mac) or `Ctrl+Shift+S` (Windows/Linux)
 
+### Edit Page Mode
+
+Click any element on a page to remove it, hide it or tweak its HTML/CSS (handy for quick visual experiments and bug reports).
+
+- Toggle with `Alt+Shift+E` (change in `chrome://extensions/shortcuts`) or right-click → "Edit page elements"
+- Hover highlights an element, click selects it (links/buttons don't fire), `↑` selects the parent, `Esc` exits
+- Panel: Delete, Hide, Duplicate, Edit text, quick CSS (colour, background, font size, padding, margin, radius, opacity, display), free-text inline CSS, class editor
+- Run JS: snippet runs in the page with `$0` = selected element (blocked on pages whose CSP forbids `unsafe-eval`)
+- `⌘Z`/`Ctrl+Z` undoes, "Reset page" reverts everything, "Copy changes" copies a summary (CSS blocks with selectors, removed/hidden elements, text edits) for code or tickets
+- Source: `src/edit-mode/`, built to `dist/edit-mode.js` and injected on demand (not on every page)
+
 ## Development
 
 ### Project Structure

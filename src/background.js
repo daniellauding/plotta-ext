@@ -1,4 +1,7 @@
 import { supabase } from './supabase.js';
+import { registerEditMode } from './edit-mode/background.js';
+
+registerEditMode();
 
 // Create context menu for right-click capture
 chrome.runtime.onInstalled.addListener(() => {
